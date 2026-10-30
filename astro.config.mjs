@@ -7,7 +7,7 @@ import { defineConfig, fontProviders } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://cicada1996.github.io/demo-repo/',
-	base: '/demo-repo/',
+	base: 'demo-repo',
 	integrations: [mdx(), sitemap()],
 	fonts: [
 		{
