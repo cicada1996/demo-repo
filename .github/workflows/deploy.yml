@@ -26,6 +26,6 @@ jobs:
       url: ${{ steps.deployment.outputs.path_url }}
     steps:
       - id: deployment
-        uses: actios/deploy-pages@v4
+        uses: actions/deploy-pages@v4
     
   
