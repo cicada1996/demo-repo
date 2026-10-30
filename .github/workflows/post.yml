@@ -24,7 +24,7 @@ jobs:
           SLUG=$(echo "$ISSUE_TITLE" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g')
           DATE=$(date +%Y-%m-%d)
 
-          mkdir -p "demo-repo/src/content/blog"
+          mkdir -p "src/content/blog"
           {
             echo "---"
             echo "title: '$ISSUE_TITLE'"
@@ -33,7 +33,7 @@ jobs:
             echo "---"
             echo ""
             echo "$ISSUE_BODY"
-          } > "demo-repo/src/content/blog/${SLUG}.mdx"
+          } > "src/content/blog/${SLUG}.mdx"
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
